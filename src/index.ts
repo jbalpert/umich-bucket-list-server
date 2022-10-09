@@ -14,7 +14,7 @@ app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 app.use(cors(
     {
-        origin: "https://web-production-0817.up.railway.app/",
+        origin: "https://umichbucketlist.com",
         credentials: true,
     }
 ));
