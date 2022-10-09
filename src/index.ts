@@ -14,7 +14,7 @@ app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 app.use(cors(
     {
-        origin: "https://www.umichbucketlist.com",
+        origin: ["https://www.umichbucketlist.com", "http://localhost:3000", "http://localhost:5000"],
         credentials: true,
     }
 ));
