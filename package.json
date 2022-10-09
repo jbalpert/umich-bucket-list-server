@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "start": "ts-node-dev --respawn --transpileOnly src/index.ts"
   },
   "engines": {
     "node": "v16.13.0"
