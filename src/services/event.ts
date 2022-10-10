@@ -13,9 +13,9 @@ export const getEventByIdService = async (id: string) => {
 export const getEventsService = async (approval?: string, startDate?: string, endDate = "12/12/3000") => {
     const events = await Event.find({
         start_date: { $gte: startDate, $lte: endDate },
-        // if approval is true return all approved events, if false return all unapproved events, else return all events
+        // if approval is true return all approved events, if false return all unapproved events, else return all events order ascending by start date
         approval: approval === "true" ? true : approval === "false" ? false : { $in: [true, false] },
-    });
+    }).sort({ start_date: 1 });
     if (!events) throw Error('No events found');
     return events;
 }
